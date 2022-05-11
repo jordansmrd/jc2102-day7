@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- doctype html untuk memberi tahu browser bahwa kt menggunakan versi html ke lima -->
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+
+/* p {text-align: center;} */
+form {text-align: center;}
+</style>
+
+
+</head>
+<body>
+
+<h1>Registrasi</h1>
+<h2>Please fill in this form to create an account.
+</h2>
+<form class="FormRegister">
+<div>Nama <input type="text" value="" id="nama"> </div> <br>
+<div>Tanggal Lahir <input type="date" id="ttl"> </div> <br>
+<div>Alamat <input type="text" id="alamat"></div> <br>
+<div>Umur <input type="number" id="umur"></div> <br>
+<div>Email <input type="text" id="email"> </div> <br>
+<div>Password <input type="password" id="pass"> </div> <br>
+
+<button onclick="submitRegister()">Registrasi</button>
+
+</form>
+
+<script>
+    function submitRegister()
+    {
+    var list = document.getElementsByClassName("FormRegister")[0]
+    var show = `
+                Nama : ${list.nama.value}
+                Tanggal Lahir : ${list.ttl.value}
+                Alamat : ${list.alamat.value}
+                Umur : ${list.umur.value}
+                Email : ${list.email.value}
+                Password : ${list.pass.value}`
+    alert(show)
+    }
+
+</script>
+
+</body>
+</html>
+<!-- 
+buat simple form registrasi 
+isinya ada
+Nama
+email
+Password
+Umur
+Alamat
+tanggal Lahir
+
+button submit => alert isi dari semua yang diisi di text tersebut -->
